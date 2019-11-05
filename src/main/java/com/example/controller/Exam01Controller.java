@@ -13,7 +13,7 @@ public class Exam01Controller {
 		return "exam01";
 	}
 	
-	@RequestMapping("/result-exam01")
+	@RequestMapping("/sentName")
 	public String result(String name, Model model) {
 		model.addAttribute("name",name);
 		return "exam01-result";
