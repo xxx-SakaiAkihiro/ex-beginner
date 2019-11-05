@@ -28,11 +28,11 @@ public class Exam03Controller {
 	
 	@RequestMapping("/totalMoney")
 	public String total(Exam03From from) {
-		Integer total = from.getProduct1() + from.getProduct2() + from.getProduct3();
-		application.setAttribute("total", total);
+		Integer totalPrice = from.getProduct1() + from.getProduct2() + from.getProduct3();
+		application.setAttribute("totalPrice", totalPrice);
 		
-		Integer taxTotal = (int) (total * 1.08);
-		application.setAttribute("taxTotal", taxTotal);
+		Integer totalPriceIncludeTax = (int) (totalPrice * 1.08);
+		application.setAttribute("totalPriceIncludeTax", totalPriceIncludeTax);
 		
 		return "exam03-result";
 	}
